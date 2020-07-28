@@ -5,8 +5,9 @@ import (
 	"os/exec"
 )
 
-func ExecuteScript(path string, pos_args string) string {
-	cmd, err := exec.Command("/bin/sh", path, pos_args).CombinedOutput()
+// ExecuteScript calls a script with positional parameters
+func ExecuteScript(path string, args string) string {
+	cmd, err := exec.Command("/bin/sh", path, args).CombinedOutput()
 	if err != nil {
 		fmt.Printf("error %s", err)
 	}
