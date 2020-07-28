@@ -1,5 +1,10 @@
 package tools
 
+import (
+	"fmt"
+	"os/exec"
+)
+
 func ExecuteScript(path string, pos_args string) string {
 	cmd, err := exec.Command("/bin/sh", path, pos_args).CombinedOutput()
 	if err != nil {
