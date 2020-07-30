@@ -4,6 +4,7 @@ go 1.14
 
 require (
 	github.com/go-bindata/go-bindata v3.1.2+incompatible // indirect
+	github.com/go-git/go-git/v5 v5.1.0
 	github.com/jteeuwen/go-bindata v3.0.7+incompatible // indirect
 	github.com/machinebox/graphql v0.2.2
 	github.com/pkg/errors v0.9.1 // indirect
