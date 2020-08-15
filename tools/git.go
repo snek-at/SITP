@@ -1,6 +1,7 @@
 package tools
 
 import (
+	"bytes"
 	"encoding/json"
 	"log"
 	"os/exec"
@@ -89,6 +90,9 @@ func CommitLog(depth int) []CommitLogStruct {
 		"message": "Add-go.sum"
 	}]
 	*/
+
+	// Escape backslashes
+	out = bytes.ReplaceAll(out, []byte(`\`), []byte(`\\`))
 
 	// Return list
 	var logData []CommitLogStruct
