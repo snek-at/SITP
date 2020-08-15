@@ -2,29 +2,15 @@ package client
 
 import (
 	"context"
-	"errors"
-	"log"
-	"os"
 
 	"github.com/machinebox/graphql"
 )
 
-func getEnv(key string) string {
-	if value, ok := os.LookupEnv(key); ok {
-		return value
-	}
-	log.Fatal(errors.New(key + " not set"))
-	return ""
-}
-
 // SendToOPS send a datastring to the OPS SITP endpoint
-func SendToOPS(data string) {
-	// assign env vars
-	OPSURL := getEnv("OPS_URL")
-	OPSTOKEN := getEnv("OPS_TOKEN")
+func SendToOPS(url string, token string, data string) {
 
 	// create a client (safe to share across requests)
-	client := graphql.NewClient(OPSURL)
+	client := graphql.NewClient(url)
 
 	// define a Context for the request
 	// Ref: https://golang.org/pkg/context/
@@ -68,7 +54,7 @@ func SendToOPS(data string) {
 		RawData       string `json:"raw_data"`
 	}
 
-	values := valuesStruct{OPSTOKEN, data}
+	values := valuesStruct{token, data}
 
 	// set any variables
 	req.Var("token", JWT)
