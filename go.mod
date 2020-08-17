@@ -9,4 +9,5 @@ require (
 	github.com/machinebox/graphql v0.2.2
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/snek-at/sitp v0.0.0-20200728085028-cb28411293e4 // indirect
+	gopkg.in/yaml.v2 v2.2.4
 )
