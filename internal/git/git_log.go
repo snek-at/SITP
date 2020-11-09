@@ -42,5 +42,8 @@ func GetLog(completeLog bool) (<-chan tools.CommitLogStruct, error) {
 	return chnl, nil
 }
 
+// CommitLog references tools.CommitLogStruct as array
 type CommitLog = []tools.CommitLogStruct
+
+// CommitFiles references tools.CommitFilesStruct as array
 type CommitFiles = []tools.CommitFilesStruct

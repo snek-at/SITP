@@ -10,4 +10,5 @@ func GetInformation() BasicInformation {
 	return tools.Info()
 }
 
+// BasicInformation references tools.InformationStruct
 type BasicInformation = tools.InformationStruct
