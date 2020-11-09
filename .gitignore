@@ -1,31 +1,21 @@
-#> Environment Section
-# Docker environment
-.env
+# Mac OS X files
+.DS_Store
 
-# Django environments
-linux-venv/
-windows-env/
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
 
-# Pycache
-__pycache__/
-*.pyc
+# Test binary, build with `go test -c`
+*.test
 
-# SQLite
-*.sqlite3
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
 
-#> Media Section
-# Audios
-*.ogg
-*.mp3
+# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
+.glide/
 
-# Images
-*.jpg
-*.png
-*.gif
-*.svg
-
-# Fonts
-*.ttf
-
-# SPDX-License-Identifier: (EUPL-1.2)
-# Copyright © 2019-2020 Simon Prast
+# Dependency directories (remove the comment below to include it)
+# vendor/
